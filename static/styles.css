@@ -1,0 +1,43 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+h1{
+    text-align: center;
+}
+
+th {
+    text-align: center; 
+    font-size: 1.5rem;
+}
+
+/* Ajustanto alinhamento do texto do AR e CONTATO */
+th:not(:first-child):not(:nth-child(4)),
+td:not(:first-child):not(:nth-child(4)) {
+    text-align: center;
+}
+
+/* Ajustanto alinhamento do texto e largura do Índice */
+th:nth-child(1),
+td:nth-child(1) {
+    width: 50px;
+    text-align: center;
+}
+
+/* Ajustanto alinhamento do texto e largura do Status */
+th:nth-child(4),
+td:nth-child(4) {
+    width: 200px; 
+    text-align: center;
+}
+
+/* Ajustanto alinhamento do texto do AR e CONTATO */
+th:not(:nth-child(1)):not(:nth-child(4)),
+td:not(:nth-child(1)):not(:nth-child(4)) {
+    width: calc((100% - 250px) / 3);
+}
+
+th, td {
+    border: 1px solid #7d7d7d;
+    padding: 8px;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Control</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>AR Control</h1>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 50px;">Índice</th>
+                <th>AR</th>
+                <th>Contato</th>
+                <th style="width: 200px;">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for index, row in enumerate(data, start=1) %}
+            <tr>
+                <td>{{ index }}</td>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
